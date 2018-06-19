@@ -9,6 +9,7 @@ import java.util.List;
 @Service
 public class StackOverflowService {
     private static List<StackOverflowWebsite> items = new ArrayList<>();
+
     static {
         items.add(new StackOverflowWebsite("ru.stackoverflow", "http://ru.stackoverflow.com",
                 "http://cdn.sstatic.net/Sites/ru/img/favicon.ico", "Stack Overflow на русском (Stack Exchange)",

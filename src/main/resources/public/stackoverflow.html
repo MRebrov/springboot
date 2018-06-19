@@ -13,7 +13,7 @@
                     <div class="panel-heading"> StackOverflow sites</div>
                     <div class="panel-body">
                         <table class="table table-striped">
-                            <head>
+                            <thead>
                                 <tr>
                                     <th>icon</th>
                                     <th>id</th>
@@ -21,8 +21,8 @@
                                     <th>title</th>
                                     <th>description</th>
                                 </tr>
-                            </head>
-                            <body>
+                            </thead>
+                            <tbody>
                             <tr ng-repeat="item in websites">
                                 <td><img ng-src="{{item.iconImageUrl}}"></td>
                                 <td>{{item.id}}</td>
@@ -30,7 +30,7 @@
                                 <td>{{item.title}}</td>
                                 <td>{{item.description}}</td>
                             </tr>
-                            </body>
+                            </tbody>
                         </table>
                     </div>
                 </div>

@@ -1,18 +1,19 @@
 package de.springboot.model;
 
 public class StackOverflowWebsite {
-    private String id;
-    private String website;
-    private String iconImageUrl;
-    private String description;
-    private String title;
+    private final String id;
+    private final String website;
+    private final String iconImageUrl;
+    private final String title;
+    private final String description;
 
-    public StackOverflowWebsite(String id, String website, String iconImageUrl, String description, String title) {
+
+    public StackOverflowWebsite(String id, String website, String iconImageUrl, String title, String description) {
         this.id = id;
         this.website = website;
         this.iconImageUrl = iconImageUrl;
-        this.description = description;
         this.title = title;
+        this.description = description;
     }
 
     public String getId() {
