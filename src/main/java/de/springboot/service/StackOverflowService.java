@@ -1,6 +1,8 @@
 package de.springboot.service;
 
 import de.springboot.model.StackOverflowWebsite;
+import de.springboot.persistence.StackOverflowWebsiteRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -8,6 +10,10 @@ import java.util.List;
 
 @Service
 public class StackOverflowService {
+
+    @Autowired
+    StackOverflowWebsiteRepository repository;
+
     private static List<StackOverflowWebsite> items = new ArrayList<>();
 
     static {
@@ -35,6 +41,6 @@ public class StackOverflowService {
     }
 
     public List<StackOverflowWebsite> findAll() {
-        return items;
+        return repository.findAll();
     }
 }
